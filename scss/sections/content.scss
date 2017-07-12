@@ -36,12 +36,14 @@
       font-size:1.6rem;
       padding: 38px 0;
       line-height:2.75rem;
-      margin:0 20px 15px;
+      margin:0 20px 0;
     }
     @media (min-width: $big) {
+      width:42.5%;
       padding: 18px 0;
       line-height:1.665rem;
       margin:0 30px 24px;
+      font-size:1rem;
     }
   }
 }

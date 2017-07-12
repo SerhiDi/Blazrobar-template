@@ -54,7 +54,7 @@
     .main-menu {
       clear: both;
       list-style: none;
-      padding: 4px 0;
+      padding: 4px 0 0 24px;
       margin: 0;
       transition: max-height 0.3s ease;
       display: none;
@@ -81,9 +81,9 @@
         text-decoration: none;
         display: inline-block;
         text-transform: uppercase;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
         &:hover {
-          color: #000;
+          color: $color-2;
         }
       }
     }
