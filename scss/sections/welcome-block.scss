@@ -82,8 +82,10 @@
     .arrow {
       border: solid #fff;
       display: inline-block;
-      transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
       border-width: 0 1px 1px 0;
       padding: 4px;
       position: absolute;

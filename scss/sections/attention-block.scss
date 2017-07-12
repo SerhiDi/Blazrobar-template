@@ -51,6 +51,8 @@
       left: 45%;
       top: 48%;
       transform: translate(-50%, -50%) rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      ms-transform: rotate(-45deg);
       @media (min-width: $medium) {
         border-width: 0 4px 4px 0;
         padding: 8px;

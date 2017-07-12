@@ -5,7 +5,7 @@
 
   hamburger.addEventListener('click', function () {
     mainMenu.classList.toggle('active');
-  })
+  });
 
   window.addEventListener("resize", function() {
     if(window.innerWidth >= 980) {
