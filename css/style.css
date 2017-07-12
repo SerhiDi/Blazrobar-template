@@ -309,11 +309,17 @@ template {
 .header .main-menu-block .main-menu {
   clear: both;
   list-style: none;
-  padding: 4px 0 0 24px;
+  padding: 4px 0 0 8px;
   margin: 0;
   -webkit-transition: max-height .3s ease;
   transition: max-height .3s ease;
   display: none;
+}
+
+@media (min-width:640px) {
+  .header .main-menu-block .main-menu {
+    padding: 4px 0 0 24px;
+  }
 }
 
 @media (min-width:980px) {
@@ -948,11 +954,17 @@ html {
 .header .main-menu-block .main-menu {
   clear: both;
   list-style: none;
-  padding: 4px 0 0 24px;
+  padding: 4px 0 0 8px;
   margin: 0;
   -webkit-transition: max-height .3s ease;
   transition: max-height .3s ease;
   display: none;
+}
+
+@media (min-width:640px) {
+  .header .main-menu-block .main-menu {
+    padding: 4px 0 0 24px;
+  }
 }
 
 @media (min-width:980px) {
