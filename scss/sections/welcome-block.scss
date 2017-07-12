@@ -1,12 +1,20 @@
 @import '../variables.scss';
 
 .welcome-block {
-  background-color: $color-2;
+  background-color: $color-7;
   position: relative;
   .container {
-    min-height: 260px;
-    height: 260px;
+    width:100%;
+    background-color: $color-2;
+    min-height: 174px;
+    height: 174px;
     display: table;
+    @media (min-width: $medium) {
+      min-height: 350px;
+      height: 350px;
+      width:100%;
+      padding:0 50px;
+    }
     @media (min-width: $big) {
       min-height: 576px;
       height: 576px;
@@ -15,18 +23,29 @@
   .content {
     display: table-cell;
     vertical-align: middle;
-    padding: 0 0 0 20px;
+    padding: 26px;
+    @media (min-width: $medium) {
+      padding: 0;
+      text-align: left;
+    }
     @media (min-width: $big) {
       padding: 0 198px 0 82px;
     }
   }
   h1 {
     color: #fff;
-    margin-top: 30px;
-    font-size: 1rem;
-    line-height: 2rem;
+    margin-top: 7px;
+    font-size: 1.15rem;
+    line-height: 1.3rem;
     font-weight: normal;
-    letter-spacing: 4.2px;
+    letter-spacing: 0.9px;
+    @media (min-width: $medium) {
+      margin-top: 12px;
+      margin-bottom:0;
+      font-size: 2.6rem;
+      line-height: 2.7rem;
+      letter-spacing: -1.5px;
+    }
     @media (min-width: $big) {
       font-size: 3.5rem;
       line-height: 4.4rem;
@@ -35,13 +54,18 @@
   .welcome-link {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    margin-top: 18px;
+    font-size: 0.7rem;
+    line-height: 1rem;
     display: block;
     position: relative;
     padding-right: 40px;
-    letter-spacing: 2px;
+    @media (min-width: $medium) {
+      margin-top: 24px;
+      font-size: 1.35rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.5px;
+      padding-right: 100px;
+    }
     @media (min-width: $big) {
       margin-top: 42px;
       font-size: 2rem;
@@ -53,14 +77,26 @@
     }
     .arrow {
       border: solid #fff;
-      border-width: 0 3px 3px 0;
       display: inline-block;
       transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg);
-      padding: 6px;
+      border-width: 0 1px 1px 0;
+      padding: 4px;
       position: absolute;
-      right: 24px;
-      top: 14px;
+      right: 44px;
+      top: 6px;
+      @media (min-width: $medium) {
+        border-width: 0 3px 3px 0;
+        right: 90px;
+        top: 8px;
+        padding: 6px;
+      }
+      @media (min-width: $big) {
+        border-width: 0 3px 3px 0;
+        right: 24px;
+        top: 14px;
+        padding: 6px;
+      }
     }
   }
 

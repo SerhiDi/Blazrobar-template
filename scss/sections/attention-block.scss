@@ -12,13 +12,14 @@
     float: left;
     display: inline-block;
     color: $color-5;
-    margin: 36px 0 0 20px;
+    margin: 34px 0 0 28px;
     max-width:100%;
-    font-size:0.8rem;
-    letter-spacing: -0.3px;
+    font-size:0.6rem;
+    letter-spacing: -0.1px;
     @media (min-width: $medium) {
-      margin:50px 0 0 80px;
-      font-size:1.5rem;
+      margin:68px 0 0 54px;
+      font-size:1.25rem;
+      letter-spacing: -0.2px;
     }
     @media (min-width: $big) {
       margin:110px 0 0 85px;
@@ -27,15 +28,15 @@
   }
   .arrow {
     background-color: $color-6;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 76px;
     position: relative;
     display: inline-block;
     white-space: normal;
     float: right;
     @media (min-width: $medium) {
-      width: 120px;
-      height: 120px;
+      width: 142px;
+      height: 150px;
     }
     @media (min-width: $big) {
       width: 228px;

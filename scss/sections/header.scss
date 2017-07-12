@@ -1,8 +1,11 @@
 @import '../variables.scss';
 
 .header {
-  background-color: $color-1;
+  background-color: $color-7;
   position: relative;
+  .container {
+    background-color: $color-1;
+  }
   .main-menu-block {
     overflow: hidden;
     .navigation-title {
@@ -10,13 +13,16 @@
       color: #fff;
       font-size: 0.8rem;
       line-height:0.8rem;
-      margin: 0;
       padding: 12px 0 0 18px;
       letter-spacing: -0.3px;
+      margin:0;
+      @media (min-width: $medium) {
+        font-size: 1.6rem;
+        padding:32px 0 0 36px;
+        letter-spacing: -1px;
+      }
       @media (min-width: $big) {
         display: none;
-        font-size: 1.2rem;
-        padding: 12px 0 0 12px;
       }
     }
     .hamburger {
@@ -26,10 +32,6 @@
       cursor: pointer;
       float: right;
       padding: 4px 0;
-      background-color: red;
-      @media (min-width: $big) {
-        display: none;
-      }
       span {
         display: block;
         width: 20px;
@@ -37,11 +39,22 @@
         background-color: #fff;
         margin: 6px 10px;
       }
+      @media (min-width: $medium) {
+        padding: 22px 14px;
+        span {
+          width: 32px;
+          height: 4px;
+          margin: 4px 10px;
+        }
+      }
+      @media (min-width: $big) {
+        display: none;
+      }
     }
     .main-menu {
       clear: both;
       list-style: none;
-      padding: 0;
+      padding: 4px 0;
       margin: 0;
       transition: max-height 0.3s ease;
       display: none;
@@ -55,9 +68,11 @@
     }
     .menu-item {
       margin: 4px 12px;
+      padding:4px 0;
       @media (min-width: $big) {
         display: inline-block;
         margin: 0 12px;
+        padding:0;
       }
       a {
         font-size:0.8rem;

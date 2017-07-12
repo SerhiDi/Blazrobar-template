@@ -7,4 +7,10 @@
     mainMenu.classList.toggle('active');
   })
 
+  window.addEventListener("resize", function() {
+    if(window.innerWidth >= 980) {
+      mainMenu.classList.remove("active");
+    }
+  });
+
 }());

@@ -10,13 +10,24 @@
     overflow: hidden;
     .image {
       vertical-align: middle;
+      margin:-4px;
+      @media (min-width: $medium) {
+        margin:auto;
+        overflow: hidden;
+      }
       @media (min-width: $big) {
         display: inline-block;
         width:33.4%;
         margin:-3px;
       }
       img{
-        height:300px;
+        height:278px;
+        @media (min-width: $medium) {
+          height:550px;
+        }
+        @media (min-width: $big) {
+          height:300px;
+        }
       }
     }
   }

@@ -3,24 +3,45 @@
 .main-content {
   background-color: $color-7;
   .container {
-    padding:10px 52px;
+    padding:10px 8px;
+    @media (min-width: $medium) {
+      padding:10px 52px;
+    }
   }
   h3 {
-    margin:34px 0 0 28px;
     color: $color-8;
-    font-size:2rem;
-    letter-spacing: -1.2px;
     font-weight: normal;
+    margin:22px 0 0 28px;
+    font-size:1.2rem;
+    letter-spacing: 0.2px;
+    @media (min-width: $medium) {
+      margin:68px 0 0 22px;
+      font-size:2rem;
+      letter-spacing: -1.2px;
+    }
+    @media (min-width: $big) {
+      margin:34px 0 0 28px;
+      font-size:2rem;
+      letter-spacing: -1.2px;
+    }
   }
   p {
     display: inline-block;
-    padding: 18px 0;
+    padding: 15px 0;
     color: #555;
     margin:0 30px 24px;
     font-size: 0.8rem;
-    line-height:1.665rem;
+    line-height:1.4rem;
+    @media (min-width: $medium) {
+      font-size:1.6rem;
+      padding: 38px 0;
+      line-height:2.75rem;
+      margin:0 20px 15px;
+    }
     @media (min-width: $big) {
-      width:43%;
+      padding: 18px 0;
+      line-height:1.665rem;
+      margin:0 30px 24px;
     }
   }
 }
