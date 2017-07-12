@@ -1,0 +1,64 @@
+@import '../variables.scss';
+
+.attention-block {
+  background-color: $color-7;
+  .container {
+    overflow: hidden;
+    background-color: $color-4;
+    position: relative;
+    white-space: nowrap;
+  }
+  p {
+    float: left;
+    display: inline-block;
+    color: $color-5;
+    margin: 36px 0 0 20px;
+    max-width:100%;
+    font-size:0.8rem;
+    letter-spacing: -0.3px;
+    @media (min-width: $medium) {
+      margin:50px 0 0 80px;
+      font-size:1.5rem;
+    }
+    @media (min-width: $big) {
+      margin:110px 0 0 85px;
+      font-size:2rem;
+    }
+  }
+  .arrow {
+    background-color: $color-6;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    display: inline-block;
+    white-space: normal;
+    float: right;
+    @media (min-width: $medium) {
+      width: 120px;
+      height: 120px;
+    }
+    @media (min-width: $big) {
+      width: 228px;
+      height: 248px;
+    }
+    span {
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 4px;
+      position: absolute;
+      left: 45%;
+      top: 48%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      @media (min-width: $medium) {
+        border-width: 0 4px 4px 0;
+        padding: 8px;
+      }
+      @media (min-width: $big) {
+        border-width: 0 6px 6px 0;
+        padding: 12px;
+      }
+    }
+
+  }
+}

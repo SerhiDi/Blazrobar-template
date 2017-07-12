@@ -1,0 +1,23 @@
+@import '../variables.scss';
+
+.image-gallery-block {
+  background-color: $color-7;
+  .image-gallery {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    text-align: center;
+    overflow: hidden;
+    .image {
+      vertical-align: middle;
+      @media (min-width: $big) {
+        display: inline-block;
+        width:33.4%;
+        margin:-3px;
+      }
+      img{
+        height:300px;
+      }
+    }
+  }
+}

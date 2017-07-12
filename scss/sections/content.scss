@@ -1,0 +1,26 @@
+@import '../variables.scss';
+
+.main-content {
+  background-color: $color-7;
+  .container {
+    padding:10px 52px;
+  }
+  h3 {
+    margin:34px 0 0 28px;
+    color: $color-8;
+    font-size:2rem;
+    letter-spacing: -1.2px;
+    font-weight: normal;
+  }
+  p {
+    display: inline-block;
+    padding: 18px 0;
+    color: #555;
+    margin:0 30px 24px;
+    font-size: 0.8rem;
+    line-height:1.665rem;
+    @media (min-width: $big) {
+      width:43%;
+    }
+  }
+}
