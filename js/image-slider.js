@@ -143,7 +143,6 @@
     changeSlidesWidth: function () {
       this.gallery.style.left = 0;
       this.gallery.style.width = window.innerWidth * this.slides.length + 'px';
-      console.log(this.gallery.style.width);
       this.setCurrentSlide(0);
       Array.prototype.forEach.call(this.slides, function (slide) {
         slide.style.maxWidth = window.innerWidth + 'px';

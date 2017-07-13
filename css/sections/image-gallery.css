@@ -41,8 +41,7 @@
       overflow: hidden; }
       .image-gallery-block .image-slider .images .image {
         float: left;
-        max-width: 640px;
-        min-width: 320px; }
+        max-width: 640px; }
         .image-gallery-block .image-slider .images .image img {
           max-width: 100%;
           height: auto;
