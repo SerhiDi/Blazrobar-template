@@ -35,12 +35,13 @@
     init: function () {
       this.gallery = this.el.querySelector('.images');
       this.wrapper = this.el.querySelector('.images-wrapper');
-      this.gallery.style.left = 0;
+
       this.el.classList.add('image-slider');
       this.slides = this.gallery.querySelectorAll('.image');
-      this.currentSlideIndex = 0;
+
       this.createArrows();
       this.createPagination();
+      this.resetSlider();
     },
 
     //destroy
@@ -49,6 +50,12 @@
       this.el.classList.remove('image-slider');
       this.paginationBlock.parentNode.removeChild(this.paginationBlock);
       this.arrowsBlock.parentNode.removeChild(this.arrowsBlock);
+    },
+
+    resetSlider : function () {
+      this.currentSlideIndex = 0;
+      this.gallery.style.left = 0;
+      this.setCurrentSlide(0);
     },
 
     //pagination
@@ -64,7 +71,6 @@
       }
       this.el.appendChild(this.paginationBlock);
       this.links = this.paginationBlock.querySelectorAll('.link');
-      this.setCurrentSlide(this.currentSlideIndex);
     },
 
     //arrows
@@ -141,9 +147,8 @@
     },
 
     changeSlidesWidth: function () {
-      this.gallery.style.left = 0;
       this.gallery.style.width = window.innerWidth * this.slides.length + 'px';
-      this.setCurrentSlide(0);
+      this.resetSlider();
       Array.prototype.forEach.call(this.slides, function (slide) {
         slide.style.maxWidth = window.innerWidth + 'px';
       })
