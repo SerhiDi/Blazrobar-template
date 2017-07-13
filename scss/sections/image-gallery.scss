@@ -38,34 +38,35 @@
 
   .image-slider {
     position: relative;
+    padding-bottom: 26px;
     .images {
-      height: 420px;
       width: 9999px;
       transition: left 0.4s ease;
       position: relative;
+      overflow: hidden;
+      height:100%;
       .image {
         float: left;
-        height: 100%;
         overflow: hidden;
-        position: relative;
         max-width: 640px;
-        object-fit: contain;
+        min-width:320px;
         img {
-          display: inline-block;
           max-width: 100%;
           height: auto;
+          vertical-align: middle;
         }
       }
     }
     .arrows {
       user-select: none;
       vertical-align: middle;
+      height:100%;
       .arrow-right, .arrow-left {
         overflow: hidden;
         color: $color-2;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        margin-top:-40px;
         cursor: pointer;
         width: 50px;
         height: 80px;
@@ -90,11 +91,13 @@
       }
     }
     .pagination {
-      padding: 8px 0;
+      position: absolute;
       text-align: center;
+      width:100%;
       .link {
+        vertical-align: middle;
         cursor: pointer;
-        margin: 0 6px;
+        margin: 4px 6px;
         width: 14px;
         height: 14px;
         display: inline-block;

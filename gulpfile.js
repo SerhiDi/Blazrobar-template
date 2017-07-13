@@ -7,13 +7,13 @@ var concatCss = require('gulp-concat-css');
 var sassFiles = 'scss/**/*.scss';
 
 gulp.task('sass', function () {
-  gulp.src(sassFiles)
+  gulp.src('./scss/style.scss')
     .pipe(sass({
       includePaths: require('node-normalize-scss').includePaths
     })).on('error', sass.logError)
     .pipe(minifycss())
     .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
+      browsers: ['last 2 versions', 'ie 9'],
       cascade: false
     }))
     .pipe(concatCss("style.css"))

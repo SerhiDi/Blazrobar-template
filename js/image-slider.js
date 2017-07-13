@@ -11,11 +11,16 @@
     function checkSlider() {
       if (!sliderActive && window.innerWidth <= 640) {
         slider = new Slider('.image-gallery');
-        sliderActive = true
+        sliderActive = true;
       } else if (sliderActive && window.innerWidth > 640) {
         slider.destroy();
         sliderActive = false;
       }
+
+      if(sliderActive) {
+        slider.changeSlidesWidth();
+      }
+
     }
 
   });
@@ -39,6 +44,7 @@
 
     //destroy
     destroy: function () {
+      this.wrapper.style.left = 0;
       this.el.classList.remove('image-slider');
       this.paginationBlock.parentNode.removeChild(this.paginationBlock);
       this.arrowsBlock.parentNode.removeChild(this.arrowsBlock);
@@ -131,6 +137,14 @@
     moveToSlide: function () {
       var currentPage = this.el.querySelector('.image:nth-child(' + (this.currentSlideIndex + 1) + ')');
       this.wrapper.style.left = '-' + currentPage.offsetLeft + 'px';
+    },
+
+    changeSlidesWidth: function () {
+      this.wrapper.style.left = 0;
+      this.setCurrentSlide(0);
+      Array.prototype.forEach.call(this.slides, function (slide) {
+        slide.style.maxWidth = window.innerWidth +'px';
+      })
     }
 
   };
