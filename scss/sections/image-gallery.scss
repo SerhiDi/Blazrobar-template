@@ -5,28 +5,105 @@
   .image-gallery {
     list-style: none;
     padding: 0;
-    margin:0;
+    margin: 0;
     text-align: center;
     overflow: hidden;
+    .images {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
     .image {
       vertical-align: middle;
-      margin:-4px;
       @media (min-width: $medium) {
-        margin:auto;
+        margin: auto;
         overflow: hidden;
       }
       @media (min-width: $big) {
         display: inline-block;
-        width:33.4%;
-        margin:-3px;
+        width: 33.4%;
+        margin: -3px;
       }
-      img{
-        height:278px;
+      img {
+        height: 278px;
         @media (min-width: $medium) {
-          height:550px;
+          height: 550px;
         }
         @media (min-width: $big) {
-          height:300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+
+  .image-slider {
+    position: relative;
+    .images {
+      height: 420px;
+      width: 9999px;
+      transition: left 0.4s ease;
+      position: relative;
+      .image {
+        float: left;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        max-width: 640px;
+        object-fit: contain;
+        img {
+          display: inline-block;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .arrows {
+      user-select: none;
+      vertical-align: middle;
+      .arrow-right, .arrow-left {
+        overflow: hidden;
+        color: $color-2;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 50px;
+        height: 80px;
+        font-size: 10rem;
+        line-height: 3rem;
+        transition: all 0.3s ease;
+        opacity: 0.9;
+        &:hover {
+          opacity: 1;
+          color: $color-6;
+        }
+        &.inactive {
+          opacity: 0.8;
+          color: #555;
+        }
+      }
+      .arrow-right {
+        right: 10px;
+      }
+      .arrow-left {
+        left: 10px;
+      }
+    }
+    .pagination {
+      padding: 8px 0;
+      text-align: center;
+      .link {
+        cursor: pointer;
+        margin: 0 6px;
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid #555;
+        transition: all 0.3s ease;
+        &.active {
+          background-color: $color-2;
         }
       }
     }

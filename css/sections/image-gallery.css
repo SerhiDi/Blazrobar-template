@@ -1,1 +1,102 @@
-.image-gallery-block{background-color:#eaeaeb}.image-gallery-block .image-gallery{list-style:none;padding:0;margin:0;text-align:center;overflow:hidden}.image-gallery-block .image-gallery .image{vertical-align:middle;margin:-4px}.image-gallery-block .image-gallery .image img{height:278px}@media (min-width:640px){.image-gallery-block .image-gallery .image{margin:auto;overflow:hidden}.image-gallery-block .image-gallery .image img{height:550px}}@media (min-width:980px){.image-gallery-block .image-gallery .image{display:inline-block;width:33.4%;margin:-3px}.image-gallery-block .image-gallery .image img{height:300px}}
+.image-gallery-block {
+  background-color: #eaeaeb; }
+  .image-gallery-block .image-gallery {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    overflow: hidden; }
+    .image-gallery-block .image-gallery .images {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+    .image-gallery-block .image-gallery .image {
+      vertical-align: middle; }
+      @media (min-width: 640px) {
+        .image-gallery-block .image-gallery .image {
+          margin: auto;
+          overflow: hidden; } }
+      @media (min-width: 980px) {
+        .image-gallery-block .image-gallery .image {
+          display: inline-block;
+          width: 33.4%;
+          margin: -3px; } }
+      .image-gallery-block .image-gallery .image img {
+        height: 278px; }
+        @media (min-width: 640px) {
+          .image-gallery-block .image-gallery .image img {
+            height: 550px; } }
+        @media (min-width: 980px) {
+          .image-gallery-block .image-gallery .image img {
+            height: 300px; } }
+  .image-gallery-block .image-slider {
+    position: relative; }
+    .image-gallery-block .image-slider .images {
+      height: 420px;
+      width: 9999px;
+      -webkit-transition: left 0.4s ease;
+      -o-transition: left 0.4s ease;
+      transition: left 0.4s ease;
+      position: relative; }
+      .image-gallery-block .image-slider .images .image {
+        float: left;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        max-width: 640px;
+        -o-object-fit: contain;
+        object-fit: contain; }
+        .image-gallery-block .image-slider .images .image img {
+          display: inline-block;
+          max-width: 100%;
+          height: auto; }
+    .image-gallery-block .image-slider .arrows {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      vertical-align: middle; }
+      .image-gallery-block .image-slider .arrows .arrow-right, .image-gallery-block .image-slider .arrows .arrow-left {
+        overflow: hidden;
+        color: #169fb5;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 50px;
+        height: 80px;
+        font-size: 10rem;
+        line-height: 3rem;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        opacity: 0.9; }
+        .image-gallery-block .image-slider .arrows .arrow-right:hover, .image-gallery-block .image-slider .arrows .arrow-left:hover {
+          opacity: 1;
+          color: #ba3583; }
+        .image-gallery-block .image-slider .arrows .arrow-right.inactive, .image-gallery-block .image-slider .arrows .arrow-left.inactive {
+          opacity: 0.8;
+          color: #555; }
+      .image-gallery-block .image-slider .arrows .arrow-right {
+        right: 10px; }
+      .image-gallery-block .image-slider .arrows .arrow-left {
+        left: 10px; }
+    .image-gallery-block .image-slider .pagination {
+      padding: 8px 0;
+      text-align: center; }
+      .image-gallery-block .image-slider .pagination .link {
+        cursor: pointer;
+        margin: 0 6px;
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid #555;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        .image-gallery-block .image-slider .pagination .link.active {
+          background-color: #169fb5; }
