@@ -17,7 +17,7 @@
         sliderActive = false;
       }
 
-      if(sliderActive) {
+      if (sliderActive) {
         slider.changeSlidesWidth();
       }
 
@@ -33,10 +33,11 @@
   Slider.prototype = {
     //init
     init: function () {
-      this.wrapper = this.el.querySelector('.images');
-      this.wrapper.style.left = 0;
+      this.gallery = this.el.querySelector('.images');
+      this.wrapper = this.el.querySelector('.images-wrapper');
+      this.gallery.style.left = 0;
       this.el.classList.add('image-slider');
-      this.slides = this.wrapper.querySelectorAll('.image');
+      this.slides = this.gallery.querySelectorAll('.image');
       this.currentSlideIndex = 0;
       this.createArrows();
       this.createPagination();
@@ -44,7 +45,7 @@
 
     //destroy
     destroy: function () {
-      this.wrapper.style.left = 0;
+      this.gallery.style.left = 0;
       this.el.classList.remove('image-slider');
       this.paginationBlock.parentNode.removeChild(this.paginationBlock);
       this.arrowsBlock.parentNode.removeChild(this.arrowsBlock);
@@ -87,7 +88,7 @@
       this.arrowsBlock.appendChild(this.leftArrow);
       this.arrowsBlock.appendChild(this.rightArrow);
 
-      this.el.appendChild(this.arrowsBlock);
+      this.wrapper.appendChild(this.arrowsBlock);
     },
 
     slidePrev: function (slider) {
@@ -136,14 +137,16 @@
 
     moveToSlide: function () {
       var currentPage = this.el.querySelector('.image:nth-child(' + (this.currentSlideIndex + 1) + ')');
-      this.wrapper.style.left = '-' + currentPage.offsetLeft + 'px';
+      this.gallery.style.left = '-' + currentPage.offsetLeft + 'px';
     },
 
     changeSlidesWidth: function () {
-      this.wrapper.style.left = 0;
+      this.gallery.style.left = 0;
+      this.gallery.style.width = window.innerWidth * this.slides.length + 'px';
+      console.log(this.gallery.style.width);
       this.setCurrentSlide(0);
       Array.prototype.forEach.call(this.slides, function (slide) {
-        slide.style.maxWidth = window.innerWidth +'px';
+        slide.style.maxWidth = window.innerWidth + 'px';
       })
     }
 

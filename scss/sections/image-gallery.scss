@@ -38,18 +38,17 @@
 
   .image-slider {
     position: relative;
-    padding-bottom: 26px;
+    .images-wrapper {
+      position: relative;
+
+    }
     .images {
-      width: 9999px;
       transition: left 0.4s ease;
       position: relative;
       overflow: hidden;
-      height:100%;
       .image {
         float: left;
-        overflow: hidden;
         max-width: 640px;
-        min-width:320px;
         img {
           max-width: 100%;
           height: auto;
@@ -60,13 +59,12 @@
     .arrows {
       user-select: none;
       vertical-align: middle;
-      height:100%;
       .arrow-right, .arrow-left {
         overflow: hidden;
         color: $color-2;
         position: absolute;
         top: 50%;
-        margin-top:-40px;
+        margin-top: -40px;
         cursor: pointer;
         width: 50px;
         height: 80px;
@@ -91,19 +89,18 @@
       }
     }
     .pagination {
-      position: absolute;
       text-align: center;
-      width:100%;
+      width: 100%;
       .link {
         vertical-align: middle;
         cursor: pointer;
-        margin: 4px 6px;
+        margin: 4px;
         width: 14px;
         height: 14px;
         display: inline-block;
         border-radius: 50%;
         background-color: #fff;
-        border: 2px solid #555;
+        border: 2px solid #666;
         transition: all 0.3s ease;
         &.active {
           background-color: $color-2;
