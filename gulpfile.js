@@ -3,8 +3,8 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
 var concat = require('gulp-concat');
-
-var sassFiles = 'scss/**/*.scss';
+var sassFiles = './scss/**/*.scss';
+var livereload = require('gulp-livereload');
 
 gulp.task('sass', function () {
   gulp.src(sassFiles)
@@ -17,10 +17,11 @@ gulp.task('sass', function () {
     }))
     .pipe(concat('style.min.css'))
     .pipe(minifycss())
-    .pipe(gulp.dest('./css/'))
-
+    .pipe(gulp.dest('css'))
+    .pipe(livereload());
 });
 
 gulp.task('watch', function () {
+  livereload.listen();
   gulp.watch(sassFiles, ['sass']);
 });

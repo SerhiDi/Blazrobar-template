@@ -2,6 +2,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     var sliderActive = false;
     var slider;
+    var maxSliderWidth = 640;
     checkSlider();
 
     window.addEventListener('resize', function () {
@@ -9,10 +10,10 @@
     });
 
     function checkSlider() {
-      if (!sliderActive && window.innerWidth <= 640) {
+      if (!sliderActive && window.innerWidth < maxSliderWidth) {
         slider = new Slider('.image-gallery');
         sliderActive = true;
-      } else if (sliderActive && window.innerWidth > 640) {
+      } else if (sliderActive && window.innerWidth >= maxSliderWidth) {
         slider.destroy();
         sliderActive = false;
       }

@@ -13,17 +13,22 @@
     display: inline-block;
     color: $color-5;
     margin: 34px 0 0 28px;
-    max-width:100%;
-    font-size:0.6rem;
+    max-width: 100%;
+    font-size: 0.6rem;
     letter-spacing: -0.1px;
     @media (min-width: $medium) {
-      margin:68px 0 0 54px;
-      font-size:1.25rem;
+      margin: 68px 0 0 54px;
+      font-size: 1.25rem;
       letter-spacing: -0.2px;
     }
     @media (min-width: $big) {
-      margin:110px 0 0 85px;
-      font-size:2rem;
+      margin: 100px 0 0 82px;
+      font-size: 2rem;
+      letter-spacing: -1px;
+    }
+    @media (min-width: $large) {
+      margin: 108px 0 0 86px;
+      letter-spacing: -0.35px;
     }
   }
   .arrow {
@@ -39,8 +44,12 @@
       height: 150px;
     }
     @media (min-width: $big) {
+      width: 218px;
+      height: 232px;
+    }
+    @media (min-width: $large) {
       width: 228px;
-      height: 248px;
+      height: 244px;
     }
     span {
       border: solid #fff;

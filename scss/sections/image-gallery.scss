@@ -13,28 +13,28 @@
       margin: 0;
       list-style: none;
       @media (min-width: $medium) {
-        width:auto !important;
+        width: auto !important;
       }
     }
     .image {
-      vertical-align: middle;
       @media (min-width: $medium) {
         margin: auto;
         overflow: hidden;
-        max-width:100% !important;
+        max-width: 100% !important;
+        height: 552px;
       }
       @media (min-width: $big) {
         display: inline-block;
         width: 33.4%;
         margin: -3px;
+        height: 298px;
       }
       img {
-        height: 278px;
+
         @media (min-width: $medium) {
-          height: 550px;
-        }
-        @media (min-width: $big) {
-          height: 300px;
+          max-width:100%;
+          min-height: 100%;
+          object-fit: cover;
         }
       }
     }
@@ -44,7 +44,6 @@
     position: relative;
     .images-wrapper {
       position: relative;
-
     }
     .images {
       transition: left 0.4s ease;
@@ -52,11 +51,14 @@
       overflow: hidden;
       .image {
         float: left;
-        max-width: 640px;
+        height: 374px;
+        width: 100%;
         img {
           max-width: 100%;
-          height: auto;
+          min-width: 320px;
+          min-height: 100%;
           vertical-align: middle;
+          object-fit: cover;
         }
       }
     }

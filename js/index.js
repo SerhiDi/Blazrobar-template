@@ -1,5 +1,6 @@
 (function () {
-
+  var windowWidth = 980;
+  var menuActive = false;
   var hamburger = document.querySelector('.hamburger');
   var mainMenu = document.querySelector('.main-menu');
 
@@ -7,9 +8,12 @@
     mainMenu.classList.toggle('active');
   });
 
-  window.addEventListener("resize", function() {
-    if(window.innerWidth >= 980) {
-      mainMenu.classList.remove("active");
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= windowWidth && menuActive) {
+      mainMenu.classList.remove('active');
+      menuActive = false;
+    } else if (!menuActive) {
+      menuActive = true;
     }
   });
 
