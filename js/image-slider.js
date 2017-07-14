@@ -21,9 +21,7 @@
       if (sliderActive) {
         slider.changeSlidesWidth();
       }
-
     }
-
   });
 
   function Slider(element) {
