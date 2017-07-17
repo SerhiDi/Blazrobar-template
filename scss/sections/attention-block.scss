@@ -3,19 +3,19 @@
 .attention-block {
   background-color: $color-7;
   .container {
-    overflow: hidden;
     background-color: $color-4;
+    overflow: hidden;
     position: relative;
     white-space: nowrap;
   }
   p {
-    float: left;
-    display: inline-block;
     color: $color-5;
-    margin: 34px 0 0 28px;
-    max-width: 100%;
+    display: inline-block;
+    float: left;
     font-size: 0.6rem;
     letter-spacing: -0.1px;
+    margin: 34px 0 0 28px;
+    max-width: 100%;
     @media (min-width: $medium) {
       margin: 68px 0 0 54px;
       font-size: 1.25rem;
@@ -33,12 +33,12 @@
   }
   .arrow {
     background-color: $color-6;
-    width: 70px;
+    display: inline-block;
+    float: right;
     height: 76px;
     position: relative;
-    display: inline-block;
     white-space: normal;
-    float: right;
+    width: 70px;
     @media (min-width: $medium) {
       width: 142px;
       height: 150px;
@@ -55,9 +55,9 @@
       border: solid #fff;
       border-width: 0 2px 2px 0;
       display: inline-block;
+      left: 45%;
       padding: 4px;
       position: absolute;
-      left: 45%;
       top: 48%;
       transform: translate(-50%, -50%) rotate(-45deg);
       -ms-transform: rotate(-45deg);
