@@ -3,115 +3,39 @@
 .image-gallery-block {
   background-color: $color-7;
   .image-gallery {
-    list-style: none;
     margin: 0;
     overflow: hidden;
     padding: 0;
     text-align: center;
-    .images {
+    .images-wrapper {
       list-style: none;
       margin: 0;
       padding: 0;
       @media (min-width: $medium) {
         width: auto !important;
       }
-    }
-    .image {
-      @media (min-width: $medium) {
-        margin: auto;
-        overflow: hidden;
-        height: 552px;
-        max-width:100% !important;
-      }
-      @media (min-width: $big) {
-        display: inline-block;
-        width: 33.4%;
-        margin: -3px;
-        height: 298px;
-      }
-      img {
-        @media (min-width: $medium) {
-          display: block;
-          width:100%;
-          height: 100%;
-          object-fit: cover;
-          font-family: 'object-fit: cover;'; //IE9
-        }
-      }
-    }
-  }
 
-  .image-slider {
-    position: relative;
-    .images-wrapper {
-      position: relative;
-    }
-    .images {
-      overflow: hidden;
-      position: relative;
-      transition: left 0.4s ease;
-      .image {
-        float: left;
-        height: 374px;
-        width: 100%;
+      & > li {
+        @media (min-width: $medium) {
+          margin: auto;
+          overflow: hidden;
+          height: 552px;
+          max-width: 100% !important;
+        }
+        @media (min-width: $big) {
+          display: inline-block;
+          width: 33.4%;
+          margin: -3px;
+          height: 298px;
+        }
         img {
-          font-family: 'object-fit: cover;'; //IE9
-          height: 100%;
-          min-width: 320px;
-          vertical-align: middle;
-          width: 100%;
-          object-fit: cover;
-        }
-      }
-    }
-    .arrows {
-      vertical-align: middle;
-      .arrow-right, .arrow-left {
-        color: $color-2;
-        cursor: pointer;
-        font-size: 10rem;
-        height: 80px;
-        line-height: 3rem;
-        margin-top: -40px;
-        opacity: 0.9;
-        overflow: hidden;
-        position: absolute;
-        top: 50%;
-        transition: all 0.3s ease;
-        width: 50px;
-        &:hover {
-          color: $color-6;
-          opacity: 1;
-        }
-        &.inactive {
-          color: #555;
-          opacity: 0.8;
-        }
-      }
-      .arrow-right {
-        right: 10px;
-      }
-      .arrow-left {
-        left: 10px;
-      }
-      user-select: none;
-    }
-    .pagination {
-      text-align: center;
-      width: 100%;
-      .link {
-        background-color: #fff;
-        border: 2px solid #666;
-        border-radius: 50%;
-        cursor: pointer;
-        display: inline-block;
-        height: 14px;
-        margin: 4px;
-        transition: all 0.3s ease;
-        vertical-align: middle;
-        width: 14px;
-        &.active {
-          background-color: $color-2;
+          @media (min-width: $medium) {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            font-family: 'object-fit: cover;'; //IE9
+          }
         }
       }
     }

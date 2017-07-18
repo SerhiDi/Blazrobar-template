@@ -36,7 +36,7 @@
       this.wrapper = this.el.querySelector('.images-wrapper');
 
       this.el.classList.add('image-slider');
-      this.slides = this.gallery.querySelectorAll('.image');
+      this.slides = this.gallery.querySelectorAll('.images > li');
 
       this.createArrows();
       this.createPagination();
@@ -141,7 +141,7 @@
     },
 
     moveToSlide: function () {
-      var currentPage = this.el.querySelector('.image:nth-child(' + (this.currentSlideIndex + 1) + ')');
+      var currentPage = this.el.querySelector('.images > li:nth-child(' + (this.currentSlideIndex + 1) + ')');
       this.gallery.style.left = '-' + currentPage.offsetLeft + 'px';
     },
 

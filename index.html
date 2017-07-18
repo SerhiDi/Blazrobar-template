@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="css/style.min.css">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/dom4/1.8.3/dom4.js"></script>
   <script src="libs/ofi.min.js"></script>
+  <script src="libs/jquery-3.2.1.js"></script>
+  <script src="js/jgall.js"></script>
+  <link rel="stylesheet" href="js/jgall.css">
 </head>
 <body>
 
@@ -35,7 +38,7 @@
   <div class="container">
     <div class="content">
       <h1>Awesome Free PSD <br>
-          templates & Resources
+        templates & Resources
       </h1>
       <a href="http://www.BlazRobar.com" class="welcome-link" target="_blank">
         <span class="link-url">www.BlazRobar.com</span>
@@ -57,21 +60,39 @@
 
 <div class="image-gallery-block">
   <div class="container">
+
     <div class="image-gallery">
-      <div class="images-wrapper">
-        <ul class="images">
-          <li class="image">
-            <img src="assets/images/1.jpg" alt="image">
-          </li>
-          <li class="image">
-            <img src="assets/images/2.jpg" alt="image">
-          </li>
-          <li class="image">
-            <img src="assets/images/3.jpg" alt="image">
-          </li>
-        </ul>
-      </div>
+
+      <ul class="images-wrapper">
+        <li>
+          <img src="assets/images/1.jpg" alt="image">
+        </li>
+        <li>
+          <img src="assets/images/2.jpg" alt="image">
+        </li>
+        <li>
+          <img src="assets/images/3.jpg" alt="image">
+        </li>
+      </ul>
+
     </div>
+
+    <div class="image-gallery">
+
+      <ul class="images-wrapper">
+        <li>
+          <img src="assets/images/1.jpg" alt="image">
+        </li>
+        <li>
+          <img src="assets/images/2.jpg" alt="image">
+        </li>
+        <li>
+          <img src="assets/images/3.jpg" alt="image">
+        </li>
+      </ul>
+
+    </div>
+
   </div>
 </div>
 
@@ -79,18 +100,18 @@
   <div class="container">
     <h3>BlazRobar.com</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea maxime officia, possimus quos sit tenetur. Beatae ea
-       eligendi magni nesciunt nihil qui repellat sit veniam, voluptatem voluptatum! Consequatur, laudantium,
+      eligendi magni nesciunt nihil qui repellat sit veniam, voluptatem voluptatum! Consequatur, laudantium,
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, reiciendis!
-       minima.</p>
+      minima.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea maxime officia, possimus quos sit tenetur. Beatae ea
-       eligendi magni nesciunt nihil qui repellat sit veniam, voluptatem voluptatum! Consequatur, laudantium,
-       minima.</p>
+      eligendi magni nesciunt nihil qui repellat sit veniam, voluptatem voluptatum! Consequatur, laudantium,
+      minima.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea maxime officia, possimus quos sit tenetur. Beatae ea
-       eligendi magni nesciunt nihil qui repellat sit veniam, voluptatem voluptatum! Consequatur, laudantium,
-       minima.</p>
+      eligendi magni nesciunt nihil qui repellat sit veniam, voluptatem voluptatum! Consequatur, laudantium,
+      minima.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea maxime officia, possimus quos sit tenetur. Beatae ea
-       eligendi magni nesciunt nihil qui repellat sit veniam, voluptatem voluptatum! Consequatur, laudantium,
-       minima.</p>
+      eligendi magni nesciunt nihil qui repellat sit veniam, voluptatem voluptatum! Consequatur, laudantium,
+      minima.</p>
   </div>
 </div>
 
@@ -99,7 +120,19 @@
 </script>
 
 <script src="js/index.js"></script>
-<script src="js/image-slider.js"></script>
+
+
+<script>
+  $('.image-gallery').jgall({
+    imagesWrapper: '.images-wrapper',
+    showArrows: true,
+    showPagination: true,
+    arrowColor: '#169fb5',
+    paginColor: '#aaa',
+    paginActiveColor: '#169fb5'
+  });
+</script>
+
 
 </body>
 </html>
