@@ -1,5 +1,4 @@
 (function ($) {
-
   var defaults = {
     imagesWrapper: '.images-wrapper',
     showArrows: true,
@@ -73,7 +72,6 @@
     $(window).resize(function () {
       checkSlider();
     });
-
 
     function initSlider() {
       slider.sliderActive = true;
